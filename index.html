@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platinum Limousine | Premium Travel Services</title>
+    <meta name="description" content="Premium luxury transportation between Cairo, Alexandria, and Airports. Best prices, latest model cars, professional drivers.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Premium Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-spinner"></div>
+        <div class="preloader-logo-text">PLATINUM</div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="main-header" id="header">
+        <div class="header-container">
+            <a href="#" class="brand-logo" aria-label="Platinum Limousine Home">
+                <img src="assets/images/logo.jpg" alt="Platinum Limousine Logo" class="logo-img">
+                <span class="logo-text">PLATINUM</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav" aria-label="Main Navigation">
+                <ul>
+                    <li><a href="#hero" class="nav-link active" data-key="nav-home">Home</a></li>
+                    <li><a href="#offers" class="nav-link" data-key="nav-offers">Special Offers</a></li>
+                    <li><a href="#fleet" class="nav-link" data-key="nav-fleet">Our Fleet</a></li>
+                    <li><a href="#features" class="nav-link" data-key="nav-features">Why Us</a></li>
+                    <li><a href="#booking" class="nav-link nav-btn" data-key="nav-book">Book Now</a></li>
+                </ul>
+            </nav>
+
+            <!-- Actions (Theme & Language Switcher) -->
+            <div class="header-actions">
+                <!-- Theme Toggle Button -->
+                <button class="action-btn theme-toggle" id="themeToggle" aria-label="Toggle Theme" title="Toggle Light/Dark Mode">
+                    <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+
+                <!-- Language Toggle Button -->
+                <button class="action-btn lang-toggle" id="langToggle" aria-label="Toggle Language" title="Switch Language">
+                    <span class="lang-text" id="langText">العربية</span>
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Mobile Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div class="mobile-nav-overlay" id="mobileNavOverlay">
+            <nav class="mobile-nav" aria-label="Mobile Navigation">
+                <ul>
+                    <li><a href="#hero" class="mobile-nav-link" data-key="nav-home">Home</a></li>
+                    <li><a href="#offers" class="mobile-nav-link" data-key="nav-offers">Special Offers</a></li>
+                    <li><a href="#fleet" class="mobile-nav-link" data-key="nav-fleet">Our Fleet</a></li>
+                    <li><a href="#features" class="mobile-nav-link" data-key="nav-features">Why Us</a></li>
+                    <li><a href="#booking" class="mobile-nav-link mobile-nav-btn" data-key="nav-book">Book Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <!-- Background video container -->
+            <div class="hero-video-wrapper">
+                <video autoplay loop muted playsinline class="hero-video">
+                    <source src="assets/my-video.mp4" type="video/mp4">
+                </video>
+                <div class="hero-overlay"></div>
+            </div>
+
+            <div class="hero-content container">
+                <span class="hero-badge" data-key="hero-badge">VIP Transport Service</span>
+                <h1 class="hero-title" data-key="hero-title">Elevate Your Journey</h1>
+                <p class="hero-subtitle" data-key="hero-subtitle">Premium executive travel between Cairo, Alexandria, and Airports with utmost comfort and punctuality.</p>
+                <div class="hero-actions-row">
+                    <a href="#booking" class="btn btn-gold" data-key="hero-btn-book">Book A Ride</a>
+                    <a href="#offers" class="btn btn-outline" data-key="hero-btn-offers">Explore Offers</a>
+                </div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator">
+                <span class="mouse-icon">
+                    <span class="mouse-wheel"></span>
+                </span>
+            </div>
+        </section>
+
+        <!-- ===== VIDEO SHOWCASE SECTION ===== -->
+        <section class="video-showcase-section" id="video-showcase">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle" data-key="video-subtitle">شاهد التجربة</span>
+                    <h2 class="section-title" data-key="video-title">اكتشف رحلتك الفاخرة</h2>
+                    <div class="gold-divider"></div>
+                    <p class="video-section-desc" data-key="video-desc">نقدم لك تجربة سفر استثنائية بأعلى مستويات الرفاهية والراحة — شاهد بنفسك ما يميز Platinum Limousine عن غيره.</p>
+                </div>
+
+                <div class="video-player-wrapper">
+                    <!-- Cinematic frame -->
+                    <div class="video-frame-outer">
+                        <div class="video-frame-inner">
+                            <video id="showcaseVideo" class="showcase-video" preload="metadata" playsinline>
+                                <source src="assets/my-video.mp4" type="video/mp4">
+                            </video>
+
+                            <!-- Custom play overlay -->
+                            <div class="video-play-overlay" id="videoOverlay" onclick="toggleShowcaseVideo()">
+                                <div class="play-btn-circle">
+                                    <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor">
+                                        <polygon points="5,3 19,12 5,21"></polygon>
+                                    </svg>
+                                </div>
+                                <span class="play-label" data-key="play-video">شغّل الفيديو</span>
+                            </div>
+
+                            <!-- Pause overlay (hidden initially) -->
+                            <div class="video-pause-overlay" id="videoPauseOverlay" onclick="toggleShowcaseVideo()">
+                                <div class="pause-btn-circle">
+                                    <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor">
+                                        <rect x="6" y="4" width="4" height="16"></rect>
+                                        <rect x="14" y="4" width="4" height="16"></rect>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Decorative corner accents -->
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent top-right"></div>
+                        <div class="corner-accent bottom-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+                    </div>
+
+                    <!-- Stats below video -->
+                    <div class="video-stats-row">
+                        <div class="video-stat">
+                            <span class="vstat-number">9+</span>
+                            <span class="vstat-label" data-key="vstat1">سيارات فاخرة</span>
+                        </div>
+                        <div class="vstat-divider"></div>
+                        <div class="video-stat">
+                            <span class="vstat-number">24/7</span>
+                            <span class="vstat-label" data-key="vstat2">خدمة متواصلة</span>
+                        </div>
+                        <div class="vstat-divider"></div>
+                        <div class="video-stat">
+                            <span class="vstat-number">1100</span>
+                            <span class="vstat-label" data-key="vstat3">جنيه للرحلة</span>
+                        </div>
+                        <div class="vstat-divider"></div>
+                        <div class="video-stat">
+                            <span class="vstat-number">100%</span>
+                            <span class="vstat-label" data-key="vstat4">رضا العملاء</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ============================= -->
+
+        <!-- Special Offers Section -->
+        <section class="offers-section" id="offers">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle" data-key="offers-subtitle">Exclusive Deals</span>
+                    <h2 class="section-title" data-key="offers-title">Signature Special Offers</h2>
+                    <div class="gold-divider"></div>
+                </div>
+
+                <div class="offer-card-featured">
+                    <div class="offer-badge" data-key="offer-tag">BEST VALUE</div>
+                    <div class="offer-content-grid">
+                        <div class="offer-info">
+                            <span class="offer-route" data-key="offer-route">Cairo ↔ Alexandria / Airports</span>
+                            <h3 class="offer-name" data-key="offer-name">The Signature 1100 EGP Offer</h3>
+                            <p class="offer-desc" data-key="offer-desc">Enjoy a premium one-way private travel experience between Cairo and Alexandria or airport transfer. Luxury transport has never been this accessible.</p>
+                            
+                            <ul class="offer-features">
+                                <li>
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span data-key="offer-f1">Fixed All-Inclusive Rate</span>
+                                </li>
+                                <li>
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span data-key="offer-f2">Sedan or Mitsubishi Xpander (6 Seats)</span>
+                                </li>
+                                <li>
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span data-key="offer-f3">Door-to-door safe pickup</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="offer-pricing-box">
+                            <div class="price-wrapper">
+                                <span class="currency" data-key="egp">EGP</span>
+                                <span class="price">1100</span>
+                                <span class="term" data-key="one-way">/ One Way</span>
+                            </div>
+                            <button onclick="selectSpecialOffer()" class="btn btn-gold w-full" data-key="offer-btn">Claim This Offer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fleet Showcase Gallery -->
+        <section class="fleet-section" id="fleet">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle" data-key="fleet-subtitle">Premium Fleet</span>
+                    <h2 class="section-title" data-key="fleet-title">Choose Your Luxury Class</h2>
+                    <div class="gold-divider"></div>
+                </div>
+
+                <div class="fleet-grid">
+                    <!-- Car Card 1: Mitsubishi Xpander -->
+                    <div class="fleet-card">
+                        <div class="fleet-media-container">
+                            <img src="assets/images/xpander_exterior.png" alt="Mitsubishi Xpander Exterior" class="fleet-img active" id="xpander-img">
+                            <!-- View Toggle Switch -->
+                            <div class="view-switch-wrapper">
+                                <button class="view-toggle-btn active" onclick="toggleVehicleView('xpander', 'exterior', this)" data-key="view-ext">Exterior</button>
+                                <button class="view-toggle-btn" onclick="toggleVehicleView('xpander', 'interior', this)" data-key="view-int">Interior</button>
+                            </div>
+                        </div>
+                        <div class="fleet-info">
+                            <h3 class="car-name" data-key="car1-name">Mitsubishi Xpander</h3>
+                            <span class="car-class" data-key="car1-class">Family SUV / 6-Seater</span>
+                            <div class="car-specs">
+                                <div class="spec-item">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg>
+                                    <span data-key="car1-seats">6 Passenger Seats</span>
+                                </div>
+                                <div class="spec-item">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                    </svg>
+                                    <span data-key="car1-luggage">4 Medium Bags</span>
+                                </div>
+                                <div class="spec-item">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                    </svg>
+                                    <span data-key="car1-special">AC & Dual Airbags</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline-gold btn-sm w-full" onclick="selectFleetCar('xpander')" data-key="book-car">Select This Vehicle</button>
+                        </div>
+                    </div>
+
+                    <!-- Car Card 2: Toyota Hiace -->
+                    <div class="fleet-card">
+                        <div class="fleet-media-container">
+                            <img src="assets/images/hiace_exterior.png" alt="Toyota Hiace Exterior" class="fleet-img active" id="hiace-img">
+                            <div class="view-switch-wrapper">
+                                <button class="view-toggle-btn active" onclick="toggleVehicleView('hiace', 'exterior', this)" data-key="view-ext">Exterior</button>
+                                <button class="view-toggle-btn" onclick="toggleVehicleView('hiace', 'interior', this)" data-key="view-int">Interior</button>
+                            </div>
+                        </div>
+                        <div class="fleet-info">
+                            <h3 class="car-name" data-key="car2-name">Toyota Hiace</h3>
+                            <span class="car-class" data-key="car2-class">VIP Executive Van / 14-Seater</span>
+                            <div class="car-specs">
+                                <div class="spec-item">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg>
+                                    <span data-key="car2-seats">14 Passenger Seats</span>
+                                </div>
+                                <div class="spec-item">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                    </svg>
+                                    <span data-key="car2-luggage">10 Large Bags</span>
+                                </div>
+                                <div class="spec-item">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                    </svg>
+                                    <span data-key="car2-special">Premium Executive Space</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline-gold btn-sm w-full" onclick="selectFleetCar('hiace')" data-key="book-car">Select This Vehicle</button>
+                        </div>
+                    </div>
+
+                    <!-- Car Card 3: Toyota Corolla -->
+                    <div class="fleet-card">
+                        <div class="fleet-media-container">
+                            <img src="assets/images/corolla_exterior.png" alt="Toyota Corolla Exterior" class="fleet-img active" id="corolla-img">
+                            <div class="view-switch-wrapper">
+                                <button class="view-toggle-btn active" onclick="toggleVehicleView('corolla', 'exterior', this)" data-key="view-ext">Exterior</button>
+                                <button class="view-toggle-btn" onclick="toggleVehicleView('corolla', 'interior', this)" data-key="view-int">Interior</button>
+                            </div>
+                        </div>
+                        <div class="fleet-info">
+                            <h3 class="car-name" data-key="car3-name">Toyota Corolla</h3>
+                            <span class="car-class" data-key="car3-class">Executive Sedan</span>
+                            <div class="car-specs">
+                                <div class="spec-item">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg>
+                                    <span data-key="car3-seats">4 Passenger Seats</span>
+                                </div>
+                                <div class="spec-item">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                    </svg>
+                                    <span data-key="car3-luggage">3 Medium Bags</span>
+                                </div>
+                                <div class="spec-item">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                    </svg>
+                                    <span data-key="car3-special">Latest model, extreme comfort</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline-gold btn-sm w-full" onclick="selectFleetCar('corolla')" data-key="book-car">Select This Vehicle</button>
+                        </div>
+                    </div>
+
+                    <!-- Car Card 4: Fiat Tipo -->
+                    <div class="fleet-card">
+                        <div class="fleet-media-container">
+                            <img src="assets/images/tipo_exterior.png" alt="Fiat Tipo Exterior" class="fleet-img active" id="tipo-img">
+                            <div class="view-switch-wrapper">
+                                <button class="view-toggle-btn active" onclick="toggleVehicleView('tipo', 'exterior', this)" data-key="view-ext">Exterior</button>
+                                <button class="view-toggle-btn" onclick="toggleVehicleView('tipo', 'interior', this)" data-key="view-int">Interior</button>
+                            </div>
+                        </div>
+                        <div class="fleet-info">
+                            <h3 class="car-name" data-key="car4-name">Fiat Tipo</h3>
+                            <span class="car-class" data-key="car4-class">Comfort Sedan</span>
+                            <div class="car-specs">
+                                <div class="spec-item">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg>
+                                    <span data-key="car4-seats">4 Passenger Seats</span>
+                                </div>
+                                <div class="spec-item">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                    </svg>
+                                    <span data-key="car4-luggage">3 Medium Bags</span>
+                                </div>
+                                <div class="spec-item">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                    </svg>
+                                    <span data-key="car4-special">Smooth ride, clean AC cabin</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline-gold btn-sm w-full" onclick="selectFleetCar('tipo')" data-key="book-car">Select This Vehicle</button>
+                        </div>
+                    </div>
+
+                    <!-- Car Card 5: Hyundai Elantra -->
+                    <div class="fleet-card">
+                        <div class="fleet-media-container">
+                            <img src="assets/images/elantra_exterior.png" alt="Hyundai Elantra Exterior" class="fleet-img active" id="elantra-img">
+                            <div class="view-switch-wrapper">
+                                <button class="view-toggle-btn active" onclick="toggleVehicleView('elantra', 'exterior', this)" data-key="view-ext">Exterior</button>
+                                <button class="view-toggle-btn" onclick="toggleVehicleView('elantra', 'interior', this)" data-key="view-int">Interior</button>
+                            </div>
+                        </div>
+                        <div class="fleet-info">
+                            <h3 class="car-name" data-key="car5-name">Hyundai Elantra</h3>
+                            <span class="car-class" data-key="car5-class">Executive Sedan</span>
+                            <div class="car-specs">
+                                <div class="spec-item">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg>
+                                    <span data-key="car5-seats">4 Passenger Seats</span>
+                                </div>
+                                <div class="spec-item">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                    </svg>
+                                    <span data-key="car5-luggage">3 Medium Bags</span>
+                                </div>
+                                <div class="spec-item">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                    </svg>
+                                    <span data-key="car5-special">Smooth and quiet ride</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline-gold btn-sm w-full" onclick="selectFleetCar('elantra')" data-key="book-car">Select This Vehicle</button>
+                        </div>
+                    </div>
+
+                    <!-- Car Card 6: Toyota Coaster -->
+                    <div class="fleet-card">
+                        <div class="fleet-media-container">
+                            <img src="assets/images/coaster_exterior.png" alt="Toyota Coaster Exterior" class="fleet-img active" id="coaster-img">
+                            <div class="view-switch-wrapper">
+                                <button class="view-toggle-btn active" onclick="toggleVehicleView('coaster', 'exterior', this)" data-key="view-ext">Exterior</button>
+                                <button class="view-toggle-btn" onclick="toggleVehicleView('coaster', 'interior', this)" data-key="view-int">Interior</button>
+                            </div>
+                        </div>
+                        <div class="fleet-info">
+                            <h3 class="car-name" data-key="car6-name">Toyota Coaster</h3>
+                            <span class="car-class" data-key="car6-class">Executive Minibus / 22-Seater</span>
+                            <div class="car-specs">
+                                <div class="spec-item">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg>
+                                    <span data-key="car6-seats">22 Passenger Seats</span>
+                                </div>
+                                <div class="spec-item">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                    </svg>
+                                    <span data-key="car6-luggage">15 Large Bags</span>
+                                </div>
+                                <div class="spec-item">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                    </svg>
+                                    <span data-key="car6-special">Spacious group transport</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline-gold btn-sm w-full" onclick="selectFleetCar('coaster')" data-key="book-car">Select This Vehicle</button>
+                        </div>
+                    </div>
+
+                    <!-- Car Card 7: Kia Cerato -->
+                    <div class="fleet-card">
+                        <div class="fleet-media-container">
+                            <img src="assets/images/cerato_exterior.png" alt="Kia Cerato Exterior" class="fleet-img active" id="cerato-img">
+                            <div class="view-switch-wrapper">
+                                <button class="view-toggle-btn active" onclick="toggleVehicleView('cerato', 'exterior', this)" data-key="view-ext">Exterior</button>
+                                <button class="view-toggle-btn" onclick="toggleVehicleView('cerato', 'interior', this)" data-key="view-int">Interior</button>
+                            </div>
+                        </div>
+                        <div class="fleet-info">
+                            <h3 class="car-name" data-key="car7-name">Kia Cerato</h3>
+                            <span class="car-class" data-key="car7-class">Comfort Sedan</span>
+                            <div class="car-specs">
+                                <div class="spec-item">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg>
+                                    <span data-key="car7-seats">4 Passenger Seats</span>
+                                </div>
+                                <div class="spec-item">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                    </svg>
+                                    <span data-key="car7-luggage">3 Medium Bags</span>
+                                </div>
+                                <div class="spec-item">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                    </svg>
+                                    <span data-key="car7-special">Modern safety features</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline-gold btn-sm w-full" onclick="selectFleetCar('cerato')" data-key="book-car">Select This Vehicle</button>
+                        </div>
+                    </div>
+
+                    <!-- Car Card 8: Kia Sportage -->
+                    <div class="fleet-card">
+                        <div class="fleet-media-container">
+                            <img src="assets/images/sportage_exterior.png" alt="Kia Sportage Exterior" class="fleet-img active" id="sportage-img">
+                            <div class="view-switch-wrapper">
+                                <button class="view-toggle-btn active" onclick="toggleVehicleView('sportage', 'exterior', this)" data-key="view-ext">Exterior</button>
+                                <button class="view-toggle-btn" onclick="toggleVehicleView('sportage', 'interior', this)" data-key="view-int">Interior</button>
+                            </div>
+                        </div>
+                        <div class="fleet-info">
+                            <h3 class="car-name" data-key="car8-name">Kia Sportage</h3>
+                            <span class="car-class" data-key="car8-class">Premium Crossover SUV</span>
+                            <div class="car-specs">
+                                <div class="spec-item">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg>
+                                    <span data-key="car8-seats">5 Passenger Seats</span>
+                                </div>
+                                <div class="spec-item">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                    </svg>
+                                    <span data-key="car8-luggage">4 Large Bags</span>
+                                </div>
+                                <div class="spec-item">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                    </svg>
+                                    <span data-key="car8-special">Panoramic roof, luxury travel</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline-gold btn-sm w-full" onclick="selectFleetCar('sportage')" data-key="book-car">Select This Vehicle</button>
+                        </div>
+                    </div>
+
+                    <!-- Car Card 9: Jetour X70 -->
+                    <div class="fleet-card">
+                        <div class="fleet-media-container">
+                            <img src="assets/images/jetour_exterior.png" alt="Jetour X70 Exterior" class="fleet-img active" id="jetour-img">
+                            <div class="view-switch-wrapper">
+                                <button class="view-toggle-btn active" onclick="toggleVehicleView('jetour', 'exterior', this)" data-key="view-ext">Exterior</button>
+                                <button class="view-toggle-btn" onclick="toggleVehicleView('jetour', 'interior', this)" data-key="view-int">Interior</button>
+                            </div>
+                        </div>
+                        <div class="fleet-info">
+                            <h3 class="car-name" data-key="car9-name">Jetour X70</h3>
+                            <span class="car-class" data-key="car9-class">Luxury Family SUV / 7-Seater</span>
+                            <div class="car-specs">
+                                <div class="spec-item">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg>
+                                    <span data-key="car9-seats">7 Passenger Seats</span>
+                                </div>
+                                <div class="spec-item">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                    </svg>
+                                    <span data-key="car9-luggage">5 Medium Bags</span>
+                                </div>
+                                <div class="spec-item">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                    </svg>
+                                    <span data-key="car9-special">Premium leather & ambient styling</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline-gold btn-sm w-full" onclick="selectFleetCar('jetour')" data-key="book-car">Select This Vehicle</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Grid Section -->
+        <section class="features-section" id="features">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle" data-key="features-subtitle">Our Promise</span>
+                    <h2 class="section-title" data-key="features-title">Designed for Your Satisfaction</h2>
+                    <div class="gold-divider"></div>
+                </div>
+
+                <div class="features-grid">
+                    <!-- Feature 1 -->
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M12 2v9M8 5h8"></path>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title" data-key="feat1-title">Modern & AC Fleets</h3>
+                        <p class="feature-desc" data-key="feat1-desc">All vehicles are late-model, clean, fully sanitised, and feature air-conditioned cabins for maximum comfort.</p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title" data-key="feat2-title">Uniformed Chauffeurs</h3>
+                        <p class="feature-desc" data-key="feat2-desc">Courteous, fully licensed, and uniformed professional drivers trained in defensive driving and premium hospitality.</p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title" data-key="feat3-title">Strict Punctuality</h3>
+                        <p class="feature-desc" data-key="feat3-desc">We respect your time. Drivers arrive 10 minutes early at your pick-up point to guarantee a stress-free travel startup.</p>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title" data-key="feat4-title">Door-to-Door Pickup</h3>
+                        <p class="feature-desc" data-key="feat4-desc">From your exact doorstep directly to your final destination, handling all luggage with absolute care.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advanced Booking System -->
+        <section class="booking-section" id="booking">
+            <div class="container">
+                <div class="booking-grid">
+                    <!-- Booking Intro/Details -->
+                    <div class="booking-details">
+                        <span class="section-subtitle" data-key="book-subtitle">Reservations</span>
+                        <h2 class="section-title text-white" data-key="book-heading">Secure Your Private Premium Travel</h2>
+                        <p class="book-intro-text" data-key="book-intro">Fill out the quick reservation details. Your booking will be instantly formatted and sent to our booking agent on WhatsApp for instant confirmation. No prepayment required.</p>
+                        
+                        <div class="contact-info-list">
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                    </svg>
+                                </div>
+                                <div class="info-texts">
+                                    <span class="info-label" data-key="book-call-us">Call or Text Us</span>
+                                    <a href="tel:+201270501109" class="info-value">+20 127 050 1109</a>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="info-texts">
+                                    <span class="info-label" data-key="book-email">Email Inquiries</span>
+                                    <a href="mailto:booking@platinumlimousine.vip" class="info-value">booking@platinumlimousine.vip</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Booking Form Panel -->
+                    <div class="booking-form-panel">
+                        <form id="whatsappBookingForm" onsubmit="handleBookingSubmit(event)">
+                            <div class="form-row">
+                                <div class="form-group w-full">
+                                    <label for="tripType" data-key="form-triptype">Trip Category</label>
+                                    <select id="tripType" onchange="adjustTripFields()" required>
+                                        <option value="offer" data-key="opt-offer" selected>Cairo-Alexandria 1100 EGP Special Offer</option>
+                                        <option value="airport" data-key="opt-airport">Airport Transfer (Cairo/Borg El Arab)</option>
+                                        <option value="custom" data-key="opt-custom">Custom Private Ride</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row-2">
+                                <div class="form-group">
+                                    <label for="pickup" data-key="form-pickup">Pickup City / Area</label>
+                                    <input type="text" id="pickup" placeholder="e.g. Rushdy, Alexandria" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="dropoff" data-key="form-dropoff">Drop-off City / Area</label>
+                                    <input type="text" id="dropoff" placeholder="e.g. New Cairo" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row-2">
+                                <div class="form-group">
+                                    <label for="tripDate" data-key="form-date">Pickup Date</label>
+                                    <input type="date" id="tripDate" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="tripTime" data-key="form-time">Pickup Time</label>
+                                    <input type="time" id="tripTime" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row-2">
+                                <div class="form-group">
+                                    <label for="fleetSelect" data-key="form-fleet">Select Vehicle</label>
+                                    <select id="fleetSelect" required>
+                                        <option value="sedan" data-key="opt-sedan">Sedan (Corolla / Tipo / Elantra / Cerato)</option>
+                                        <option value="xpander" data-key="opt-xpander">Mitsubishi Xpander (6 Seats)</option>
+                                        <option value="suv" data-key="opt-suv">Premium SUV (Sportage / Jetour)</option>
+                                        <option value="hiace" data-key="opt-hiace">Toyota Hiace VIP Van (14 Seats)</option>
+                                        <option value="coaster" data-key="opt-coaster">Toyota Coaster Minibus (22 Seats)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="fullname" data-key="form-name">Your Full Name</label>
+                                    <input type="text" id="fullname" placeholder="e.g. John Doe" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group w-full">
+                                    <label for="notes" data-key="form-notes">Special Requests / Flight Number</label>
+                                    <textarea id="notes" rows="3" placeholder="Any specific requirements (child seats, flight details, extra luggage...)"></textarea>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-gold w-full mt-4" id="submitBtn">
+                                <svg class="inline-svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.963C16.588 2.03 14.113.993 11.486.993c-5.442 0-9.866 4.372-9.87 9.802 0 1.714.453 3.39 1.317 4.88L1.93 21.17l5.962-1.55c.677-.07 1.32-.016 1.954.197z"/>
+                                </svg>
+                                <span data-key="form-submit">Confirm Booking on WhatsApp</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-top container">
+            <div class="footer-grid">
+                <!-- Footer Column 1: Brand -->
+                <div class="footer-col-brand">
+                    <a href="#" class="brand-logo mb-4">
+                        <img src="assets/images/logo.jpg" alt="Platinum Limousine Logo" class="logo-img">
+                        <span class="logo-text">PLATINUM</span>
+                    </a>
+                    <p class="brand-desc" data-key="foot-desc">Premium luxury limousine travel agency providing professional chauffeurs, elite vehicles, and punctual schedules across the Arab Republic of Egypt.</p>
+                </div>
+
+                <!-- Footer Column 2: Quick Links -->
+                <div class="footer-col-links">
+                    <h4 class="col-title" data-key="foot-links">Quick Navigation</h4>
+                    <ul>
+                        <li><a href="#hero" data-key="nav-home">Home</a></li>
+                        <li><a href="#offers" data-key="nav-offers">Special Offers</a></li>
+                        <li><a href="#fleet" data-key="nav-fleet">Our Fleet</a></li>
+                        <li><a href="#features" data-key="nav-features">Why Us</a></li>
+                        <li><a href="#booking" data-key="nav-book">Book Now</a></li>
+                    </ul>
+                </div>
+
+                <!-- Footer Column 3: Contact & Address -->
+                <div class="footer-col-contact">
+                    <h4 class="col-title" data-key="foot-contact">Office Address</h4>
+                    <p class="address-text">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-icon">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <span data-key="foot-address">456 Rushdy, Abou Qir St, in front of London Boutique, Alexandria, Egypt</span>
+                    </p>
+                    <p class="phone-text">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-icon">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        <a href="tel:+201270501109">+201270501109</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-container">
+                <p class="copyright-text">&copy; 2026 Platinum Limousine (بلاتينيوم ليموزين). All Rights Reserved.</p>
+                
+                <!-- Premium Social Links -->
+                <div class="social-links-row">
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/PlatinumLimoussine" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/platinum_limousine/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.27 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051C.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+                        </svg>
+                    </a>
+                    <!-- TikTok -->
+                    <a href="https://www.tiktok.com/@platinum_limousine" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="TikTok">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.17-2.86-.6-4.08-1.4-.2-.13-.39-.28-.57-.43-.02 1.4-.01 2.79-.02 4.19-.07 2.13-.7 4.29-2.09 5.92-1.62 1.95-4.22 2.88-6.72 2.47-2.58-.35-4.88-2.02-5.74-4.52-1.04-2.92-.12-6.52 2.29-8.49 1.71-1.41 4-1.92 6.19-1.41.02 1.34.01 2.69.01 4.03-1.24-.4-2.62-.12-3.6 0.69-.99.78-1.39 2.19-.99 3.4.35 1.17 1.5 1.99 2.72 2.02 1.33.07 2.65-.79 3.03-2.05.13-.43.16-.89.15-1.34V0l.08.02z"/>
+                        </svg>
+                    </a>
+                    <!-- YouTube -->
+                    <a href="https://www.youtube.com/@PlatinumLimousine" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.507a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.507 9.388.507 9.388.507s7.517 0 9.388-.507a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Logic -->
+    <script src="script.js"></script>
+</body>
+</html>
