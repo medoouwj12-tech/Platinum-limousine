@@ -893,6 +893,32 @@ function initScrollReveal() {
     allRevealEls.forEach(el => revealObserver.observe(el));
 }
 
+// 6. Offer Image Lightbox Modal Actions
+function openOfferImageModal() {
+    const modal = document.getElementById("offerImageModal");
+    const modalImg = document.getElementById("modalOfferImg");
+    const srcImg = document.querySelector(".offer-img");
+    if (modal && modalImg && srcImg) {
+        modalImg.src = srcImg.src;
+        modal.style.display = "block";
+        setTimeout(() => {
+            modal.classList.add("show");
+        }, 10);
+        document.body.style.overflow = "hidden"; // Prevent scrolling behind modal
+    }
+}
+
+function closeOfferImageModal() {
+    const modal = document.getElementById("offerImageModal");
+    if (modal) {
+        modal.classList.remove("show");
+        setTimeout(() => {
+            modal.style.display = "none";
+        }, 300);
+        document.body.style.overflow = "auto"; // Restore scrolling
+    }
+}
+
 // Run after DOM is ready
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initScrollReveal);

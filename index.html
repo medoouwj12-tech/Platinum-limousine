@@ -200,61 +200,72 @@
 
                 <div class="offer-card-featured">
                     <div class="offer-badge" data-key="offer-tag">عرض مميز</div>
-                    <div class="offer-content-full">
-                        <!-- Header -->
-                        <div class="offer-headline">
-                            <span class="offer-emoji">🎉</span>
-                            <h3 class="offer-name" data-key="offer-name">عرض الرحلة بـ 1100 جنيه</h3>
-                            <span class="offer-emoji">🎉</span>
-                        </div>
-
-                        <!-- How it works -->
-                        <div class="offer-section-block">
-                            <p class="offer-section-title" data-key="offer-how-title">للاستفادة من العرض، النظام كالتالي:</p>
-                            <div class="offer-price-grid">
-                                <div class="offer-price-card">
-                                    <span class="offer-price-label" data-key="offer-trip1">🚘 الرحلة الأولى (بالسعر العادي)</span>
-                                    <div class="offer-price-rows">
-                                        <span class="offer-price-row"><span data-key="offer-sedan">سيدان</span>: <strong>1800 جنيه</strong></span>
-                                        <span class="offer-price-row"><span data-key="offer-xpander">إكسباندر</span>: <strong>2000 جنيه</strong></span>
-                                    </div>
-                                </div>
-                                <div class="offer-price-card offer-price-card-highlight">
-                                    <span class="offer-price-label">🎁 <span data-key="offer-trip2">الرحلة الثانية</span></span>
-                                    <div class="offer-price-rows">
-                                        <span class="offer-price-row"><strong class="gold-text">1100 جنيه فقط</strong> <span class="offer-price-note" data-key="offer-flat">(سعر موحد)</span></span>
-                                    </div>
-                                </div>
+                    <div class="offer-grid-layout">
+                        <!-- Image Column -->
+                        <div class="offer-image-side" onclick="openOfferImageModal()">
+                            <img src="assets/images/offer_1100.jpg" alt="Cairo Airport Offer" class="offer-img">
+                            <div class="offer-image-overlay">
+                                <span class="zoom-icon">🔍</span>
                             </div>
                         </div>
 
-                        <!-- Terms -->
-                        <div class="offer-section-block">
-                            <p class="offer-section-title" data-key="offer-terms-title">📋 شروط العرض:</p>
-                            <ul class="offer-terms-list">
-                                <li><span class="term-icon">✅</span> <span data-key="offer-term1">العرض ساري حتى نهاية شهر يوليو</span></li>
-                                <li><span class="term-icon">✅</span> <span data-key="offer-term2">يسري على رحلات الإسكندرية ⇄ القاهرة أو الإسكندرية ⇄ مطار القاهرة في الاتجاهين</span></li>
-                                <li><span class="term-icon">✅</span> <span data-key="offer-term3">العرض متاح على سيارات السيدان والإكسباندر فقط</span></li>
-                                <li><span class="term-icon">✅</span> <span data-key="offer-term4">يمكن لكل عميل الاستفادة من العرض أكثر من مرة</span></li>
-                                <li><span class="term-icon">✅</span> <span data-key="offer-term5">الدفع كاش أو إنستا باي بعد انتهاء الرحلة</span></li>
-                            </ul>
-                        </div>
-
-                        <!-- Booking info -->
-                        <div class="offer-section-block">
-                            <p class="offer-section-title" data-key="offer-booking-title">📞 للحجز أو الاستفسار، أرسل لنا:</p>
-                            <div class="offer-booking-icons">
-                                <span>📍 <span data-key="offer-b1">مكان التحرك</span></span>
-                                <span>📍 <span data-key="offer-b2">الوجهة</span></span>
-                                <span>📅 <span data-key="offer-b3">تاريخ الرحلة</span></span>
-                                <span>🕒 <span data-key="offer-b4">موعد التحرك</span></span>
-                                <span>👥 <span data-key="offer-b5">عدد الركاب والحقائب</span></span>
+                        <!-- Content Column -->
+                        <div class="offer-content-full">
+                            <!-- Header -->
+                            <div class="offer-headline">
+                                <span class="offer-emoji">🎉</span>
+                                <h3 class="offer-name" data-key="offer-name">عرض الرحلة بـ 1100 جنيه</h3>
+                                <span class="offer-emoji">🎉</span>
                             </div>
-                        </div>
 
-                        <!-- CTA -->
-                        <div class="offer-cta-row">
-                            <button onclick="selectSpecialOffer()" class="btn btn-gold" data-key="offer-btn">احجز العرض الآن</button>
+                            <!-- How it works -->
+                            <div class="offer-section-block">
+                                <p class="offer-section-title" data-key="offer-how-title">للاستفادة من العرض، النظام كالتالي:</p>
+                                <div class="offer-price-grid">
+                                    <div class="offer-price-card">
+                                        <span class="offer-price-label" data-key="offer-trip1">🚘 الرحلة الأولى (بالسعر العادي)</span>
+                                        <div class="offer-price-rows">
+                                            <span class="offer-price-row"><span data-key="offer-sedan">سيدان</span>: <strong>1800 جنيه</strong></span>
+                                            <span class="offer-price-row"><span data-key="offer-xpander">إكسباندر</span>: <strong>2000 جنيه</strong></span>
+                                        </div>
+                                    </div>
+                                    <div class="offer-price-card offer-price-card-highlight">
+                                        <span class="offer-price-label">🎁 <span data-key="offer-trip2">الرحلة الثانية</span></span>
+                                        <div class="offer-price-rows">
+                                            <span class="offer-price-row"><strong class="gold-text">1100 جنيه فقط</strong> <span class="offer-price-note" data-key="offer-flat">(سعر موحد)</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Terms -->
+                            <div class="offer-section-block">
+                                <p class="offer-section-title" data-key="offer-terms-title">📋 شروط العرض:</p>
+                                <ul class="offer-terms-list">
+                                    <li><span class="term-icon">✅</span> <span data-key="offer-term1">العرض ساري حتى نهاية شهر يوليو</span></li>
+                                    <li><span class="term-icon">✅</span> <span data-key="offer-term2">يسري على رحلات الإسكندرية ⇄ القاهرة أو الإسكندرية ⇄ مطار القاهرة في الاتجاهين</span></li>
+                                    <li><span class="term-icon">✅</span> <span data-key="offer-term3">العرض متاح على سيارات السيدان والإكسباندر فقط</span></li>
+                                    <li><span class="term-icon">✅</span> <span data-key="offer-term4">يمكن لكل عميل الاستفادة من العرض أكثر من مرة</span></li>
+                                    <li><span class="term-icon">✅</span> <span data-key="offer-term5">الدفع كاش أو إنستا باي بعد انتهاء الرحلة</span></li>
+                                </ul>
+                            </div>
+
+                            <!-- Booking info -->
+                            <div class="offer-section-block">
+                                <p class="offer-section-title" data-key="offer-booking-title">📞 للحجز أو الاستفسار، أرسل لنا:</p>
+                                <div class="offer-booking-icons">
+                                    <span>📍 <span data-key="offer-b1">مكان التحرك</span></span>
+                                    <span>📍 <span data-key="offer-b2">الوجهة</span></span>
+                                    <span>📅 <span data-key="offer-b3">تاريخ الرحلة</span></span>
+                                    <span>🕒 <span data-key="offer-b4">موعد التحرك</span></span>
+                                    <span>👥 <span data-key="offer-b5">عدد الركاب والحقائب</span></span>
+                                </div>
+                            </div>
+
+                            <!-- CTA -->
+                            <div class="offer-cta-row">
+                                <button onclick="selectSpecialOffer()" class="btn btn-gold" data-key="offer-btn">احجز العرض الآن</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -913,6 +924,11 @@
             </div>
         </div>
     </footer>
+    <!-- Offer Image Lightbox Modal -->
+    <div id="offerImageModal" class="image-modal-overlay" onclick="closeOfferImageModal()">
+        <span class="image-modal-close" onclick="closeOfferImageModal()">&times;</span>
+        <img class="image-modal-content" id="modalOfferImg" src="" alt="Offer Detail">
+    </div>
 
     <!-- JS Logic -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>

@@ -878,6 +878,131 @@ html[dir="rtl"] .hero-badge {
     }
 }
 
+/* Offer Grid & Image styling */
+.offer-grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.offer-image-side {
+    position: relative;
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+    transition: var(--transition-smooth);
+    cursor: pointer;
+}
+
+.offer-image-side:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold-primary);
+    box-shadow: var(--gold-glow);
+}
+
+.offer-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.offer-image-side:hover .offer-img {
+    transform: scale(1.05);
+}
+
+.offer-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: var(--transition-smooth);
+}
+
+.offer-image-side:hover .offer-image-overlay {
+    opacity: 1;
+}
+
+.zoom-icon {
+    font-size: 2rem;
+    color: var(--gold-primary);
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1rem;
+    border-radius: var(--border-radius-full);
+    border: 1px solid var(--gold-primary);
+}
+
+/* Offer Image Modal Lightbox */
+.image-modal-overlay {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-modal-overlay.show {
+    display: block;
+    opacity: 1;
+}
+
+.image-modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: var(--border-radius-md);
+    border: 2px solid var(--gold-primary);
+    box-shadow: var(--gold-glow);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.image-modal-overlay.show .image-modal-content {
+    transform: scale(1);
+}
+
+.image-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: var(--text-primary);
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.image-modal-close:hover,
+.image-modal-close:focus {
+    color: var(--gold-primary);
+    text-decoration: none;
+}
+
+@media (max-width: 992px) {
+    .offer-grid-layout {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+}
+
 /* 8. Fleet Gallery Section */
 .fleet-section {
     padding: 8rem 0;
