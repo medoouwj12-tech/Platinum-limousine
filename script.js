@@ -751,3 +751,81 @@ function initMap() {
 }
 
 
+/* ==========================================================================
+   SCROLL REVEAL ENGINE
+   Uses IntersectionObserver for smooth, performant scroll animations.
+   ========================================================================== */
+
+function initScrollReveal() {
+
+    // --- 1. Auto-assign reveal classes to key page sections ---
+
+    // Section headings & sub-labels
+    document.querySelectorAll('.section-label, .section-subtitle, .section-title').forEach((el) => {
+        if (!el.classList.contains('reveal') && !el.classList.contains('reveal-left') && !el.classList.contains('reveal-right') && !el.classList.contains('reveal-scale')) {
+            el.classList.add('reveal');
+        }
+    });
+
+    // Special Offers card
+    document.querySelectorAll('.offer-card, .offer-card-featured').forEach(el => {
+        if (!el.classList.contains('reveal-scale')) el.classList.add('reveal-scale');
+    });
+
+    // Fleet cards — staggered
+    document.querySelectorAll('.fleet-card').forEach((el, i) => {
+        el.classList.add('reveal', `reveal-delay-${Math.min(i + 1, 6)}`);
+    });
+
+    // Feature / Why-us items — alternating left/right
+    document.querySelectorAll('.feature-item').forEach((el, i) => {
+        el.classList.add(i % 2 === 0 ? 'reveal-left' : 'reveal-right');
+    });
+
+    // Stats / counter boxes
+    document.querySelectorAll('.stat-item, .stat-box').forEach((el, i) => {
+        el.classList.add('reveal', `reveal-delay-${Math.min(i + 1, 6)}`);
+    });
+
+    // Booking / contact cards
+    document.querySelectorAll('.booking-card, .booking-form-wrapper, .contact-card').forEach(el => {
+        el.classList.add('reveal-scale');
+    });
+
+    // Map section
+    document.querySelectorAll('.map-wrapper, #map').forEach(el => el.classList.add('reveal'));
+
+    // Video showcase
+    document.querySelectorAll('.video-showcase-section, .video-container').forEach(el => {
+        el.classList.add('reveal-scale');
+    });
+
+    // Testimonials / review cards
+    document.querySelectorAll('.testimonial-card, .review-card').forEach((el, i) => {
+        el.classList.add('reveal', `reveal-delay-${Math.min(i + 1, 6)}`);
+    });
+
+    // --- 2. Create IntersectionObserver ---
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px'
+    });
+
+    // --- 3. Observe all reveal elements ---
+    const allRevealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+    allRevealEls.forEach(el => revealObserver.observe(el));
+}
+
+// Run after DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initScrollReveal);
+} else {
+    initScrollReveal();
+}
