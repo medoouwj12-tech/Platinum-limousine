@@ -386,12 +386,18 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // IntersectionObserver scroll animation fades
-    const animatedElements = document.querySelectorAll(".hero-badge, .hero-title, .hero-subtitle, .hero-actions-row, .offer-card-featured, .fleet-card, .feature-card, .booking-grid");
+    // IntersectionObserver scroll animation fades - كل حاجة تظهر من تحت
+    const animatedElements = document.querySelectorAll(
+        ".hero-badge, .hero-title, .hero-subtitle, .hero-actions-row, " +
+        ".section-header, .offer-card-featured, .fleet-card, " +
+        ".feature-card, .booking-grid, .video-frame-outer, .video-stats-row, " +
+        ".booking-form-panel, .booking-details, .offer-pricing-box, .offer-info, " +
+        ".footer-grid > div, .map-container"
+    );
     
     const observerOptions = {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px"
+        threshold: 0.08,
+        rootMargin: "0px 0px -30px 0px"
     };
 
     const scrollObserver = new IntersectionObserver((entries, observer) => {
