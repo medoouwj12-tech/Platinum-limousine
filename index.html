@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
 
@@ -786,6 +787,17 @@
                 </div>
             </div>
         </section>
+        <!-- Map Section -->
+        <section class="map-section" id="map">
+            <div class="section-header">
+                <span class="section-subtitle" data-key="map-subtitle">Our Coverage</span>
+                <h2 class="section-title" data-key="map-title">Service Areas</h2>
+                <div class="gold-divider"></div>
+            </div>
+            <div class="map-container">
+                <div id="mapCanvas"></div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
@@ -869,6 +881,7 @@
     </footer>
 
     <!-- JS Logic -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

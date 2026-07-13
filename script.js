@@ -144,7 +144,16 @@ const translations = {
         "vstat1": "Luxury Cars",
         "vstat2": "24/7 Service",
         "vstat3": "EGP Per Trip",
-        "vstat4": "Client Satisfaction"
+        "vstat4": "Client Satisfaction",
+        // Map
+        "map-subtitle": "Our Coverage",
+        "map-title": "Service Areas",
+        "map-marker-office": "Main Office",
+        "map-marker-office-desc": "456 Rushdy, Abou Qir St, Alexandria",
+        "map-marker-cairo": "Cairo",
+        "map-marker-alex": "Alexandria",
+        "map-marker-cai-airport": "Cairo International Airport",
+        "map-marker-borg-airport": "Borg El Arab Airport"
     },
     ar: {
         dir: "rtl",
@@ -286,7 +295,16 @@ const translations = {
         "vstat1": "سيارات فاخرة",
         "vstat2": "خدمة متواصلة",
         "vstat3": "جنيه للرحلة",
-        "vstat4": "رضا العملاء"
+        "vstat4": "رضا العملاء",
+        // Map
+        "map-subtitle": "منطقتنا",
+        "map-title": "مناطق الخدمة",
+        "map-marker-office": "المكتب الرئيسي",
+        "map-marker-office-desc": "456 رشدي، شارع أبو قير، الإسكندرية",
+        "map-marker-cairo": "القاهرة",
+        "map-marker-alex": "الإسكندرية",
+        "map-marker-cai-airport": "مطار القاهرة الدولي",
+        "map-marker-borg-airport": "مطار برج العرب"
     }
 };
 
@@ -389,6 +407,9 @@ document.addEventListener("DOMContentLoaded", () => {
         el.classList.add("fade-in");
         scrollObserver.observe(el);
     });
+
+    // Init map after Leaflet loads
+    setTimeout(initMap, 1000);
 });
 
 // 3. Translation Processor
@@ -425,6 +446,9 @@ function setLanguage(lang) {
     if (langTextEl) {
         langTextEl.innerText = translations[lang].langText;
     }
+
+    // Re-init map with new language
+    setTimeout(initMap, 100);
 }
 
 // 4. Fleet Image Switcher (Exterior/Interior Toggling)
@@ -644,3 +668,86 @@ function toggleShowcaseVideo() {
         pause.classList.add('hidden');
     }
 }
+
+/* =====================================================
+   MAP INITIALIZATION
+===================================================== */
+function initMap() {
+    const canvas = document.getElementById('mapCanvas');
+    if (!canvas) return;
+
+    // Check if Leaflet is loaded
+    if (typeof L === 'undefined') {
+        setTimeout(initMap, 500);
+        return;
+    }
+
+    const lang = currentLanguage || 'en';
+    const t = translations[lang];
+
+    const map = L.map('mapCanvas', {
+        center: [30.5, 30.5],
+        zoom: 8,
+        zoomControl: true,
+        scrollWheelZoom: true
+    });
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors',
+        maxZoom: 18
+    }).addTo(map);
+
+    // Custom gold icon
+    const goldIcon = L.divIcon({
+        className: 'custom-marker',
+        html: `<svg viewBox="0 0 24 24" width="36" height="36" fill="#d4af37" stroke="#000" stroke-width="1"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3" fill="#000"/></svg>`,
+        iconSize: [36, 36],
+        iconAnchor: [18, 36],
+        popupAnchor: [0, -36]
+    });
+
+    const officeIcon = L.divIcon({
+        className: 'custom-marker',
+        html: `<svg viewBox="0 0 24 24" width="44" height="44" fill="#d4af37" stroke="#000" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="4" fill="#d4af37" stroke="#000" stroke-width="1.5"/></svg>`,
+        iconSize: [44, 44],
+        iconAnchor: [22, 44],
+        popupAnchor: [0, -44]
+    });
+
+    // Main Office - Alexandria (Rushdy)
+    L.marker([31.247, 29.961], { icon: officeIcon })
+        .addTo(map)
+        .bindPopup(`<strong>${t['map-marker-office']}</strong><br>${t['map-marker-office-desc']}`);
+
+    // Alexandria city
+    L.marker([31.2, 29.918], { icon: goldIcon })
+        .addTo(map)
+        .bindPopup(`<strong>${t['map-marker-alex']}</strong>`);
+
+    // Cairo
+    L.marker([30.044, 31.236], { icon: goldIcon })
+        .addTo(map)
+        .bindPopup(`<strong>${t['map-marker-cairo']}</strong>`);
+
+    // Cairo Airport
+    L.marker([30.112, 31.413], { icon: goldIcon })
+        .addTo(map)
+        .bindPopup(`<strong>${t['map-marker-cai-airport']}</strong>`);
+
+    // Borg El Arab Airport
+    L.marker([30.918, 29.696], { icon: goldIcon })
+        .addTo(map)
+        .bindPopup(`<strong>${t['map-marker-borg-airport']}</strong>`);
+
+    // Fit bounds to show all markers
+    const group = L.featureGroup([
+        L.marker([31.247, 29.961]),
+        L.marker([31.2, 29.918]),
+        L.marker([30.044, 31.236]),
+        L.marker([30.112, 31.413]),
+        L.marker([30.918, 29.696])
+    ]);
+    map.fitBounds(group.getBounds().pad(0.15));
+}
+
+
