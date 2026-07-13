@@ -416,6 +416,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Init map after Leaflet loads
     setTimeout(initMap, 1000);
+
+    // Counter animation for stats
+    animateCounters();
 });
 
 // 3. Translation Processor
@@ -673,6 +676,45 @@ function toggleShowcaseVideo() {
         overlay.classList.remove('hidden');
         pause.classList.add('hidden');
     }
+}
+
+/* =====================================================
+   COUNTER ANIMATION
+===================================================== */
+function animateCounters() {
+    const statsRow = document.querySelector('.video-stats-row');
+    if (!statsRow) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const numbers = statsRow.querySelectorAll('.vstat-number');
+                numbers.forEach(el => {
+                    const text = el.innerText;
+                    const num = parseInt(text.replace(/[^0-9]/g, ''));
+                    const suffix = text.replace(/[0-9]/g, '');
+                    if (!isNaN(num)) {
+                        el.innerText = '0' + suffix;
+                        const target = num;
+                        const duration = 1500;
+                        const start = performance.now();
+                        function update(now) {
+                            const elapsed = now - start;
+                            const progress = Math.min(elapsed / duration, 1);
+                            const eased = 1 - Math.pow(1 - progress, 3);
+                            const current = Math.floor(eased * target);
+                            el.innerText = current + suffix;
+                            if (progress < 1) requestAnimationFrame(update);
+                        }
+                        requestAnimationFrame(update);
+                    }
+                });
+                observer.unobserve(statsRow);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    observer.observe(statsRow);
 }
 
 /* =====================================================
