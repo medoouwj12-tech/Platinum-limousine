@@ -557,6 +557,9 @@ function selectFleetCar(carType) {
     }
 }
 
+// Store full fleet options for restore
+let fullFleetOptionsHTML = null;
+
 // Adjust form inputs based on trip category selection
 function adjustTripFields() {
     const tripType = document.getElementById("tripType").value;
@@ -564,28 +567,29 @@ function adjustTripFields() {
     const pickupInput = document.getElementById("pickup");
     const dropoffInput = document.getElementById("dropoff");
 
+    // Save full options on first run
+    if (!fullFleetOptionsHTML && fleetSelect) {
+        fullFleetOptionsHTML = fleetSelect.innerHTML;
+    }
+
     if (tripType === "offer") {
-        // Under 1100 Offer, only Sedan or Xpander are applicable
+        // Only show Sedan and Xpander for the special offer
         if (fleetSelect) {
+            const offerValues = ["sedan", "xpander"];
+            const currentVal = fleetSelect.value;
+            // Filter to only offer vehicles
+            const options = Array.from(fleetSelect.options).filter(opt => offerValues.includes(opt.value));
+            fleetSelect.innerHTML = '';
+            options.forEach(opt => fleetSelect.appendChild(opt));
             fleetSelect.value = "sedan";
-            // Disable options not allowed for the offer
-            Array.from(fleetSelect.options).forEach(opt => {
-                if (opt.value === "hiace" || opt.value === "suv" || opt.value === "coaster") {
-                    opt.disabled = true;
-                } else {
-                    opt.disabled = false;
-                }
-            });
         }
         
-        pickupInput.value = currentLanguage === 'en' ? "Alexandria" : "الإسكندرية";
-        dropoffInput.value = currentLanguage === 'en' ? "Cairo" : "القاهرة";
+        if (pickupInput) pickupInput.value = currentLanguage === 'en' ? "Alexandria" : "الإسكندرية";
+        if (dropoffInput) dropoffInput.value = currentLanguage === 'en' ? "Cairo" : "القاهرة";
     } else {
-        // Re-enable all options
-        if (fleetSelect) {
-            Array.from(fleetSelect.options).forEach(opt => {
-                opt.disabled = false;
-            });
+        // Restore all vehicle options
+        if (fleetSelect && fullFleetOptionsHTML) {
+            fleetSelect.innerHTML = fullFleetOptionsHTML;
         }
     }
 }
