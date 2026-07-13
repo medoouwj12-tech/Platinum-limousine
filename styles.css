@@ -721,89 +721,161 @@ html[dir="rtl"] .hero-badge {
     border-radius: var(--border-radius-full);
 }
 
-.offer-content-grid {
-    display: grid;
-    grid-template-columns: 1.6fr 1fr;
-    gap: 3rem;
-    align-items: center;
+/* New offer full content layout */
+.offer-content-full {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
-.offer-route {
-    display: block;
-    color: var(--gold-primary);
-    font-size: 0.9rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 0.5rem;
+.offer-headline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    text-align: center;
+}
+
+.offer-emoji {
+    font-size: 2rem;
 }
 
 .offer-name {
     font-size: clamp(1.5rem, 2.5vw, 2.25rem);
-    margin-bottom: 1.25rem;
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-.offer-desc {
-    color: var(--text-secondary);
-    margin-bottom: 2rem;
-    font-weight: 300;
-}
-
-.offer-features {
+.offer-section-block {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 1rem;
 }
 
-.offer-features li {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    font-size: 0.95rem;
+.offer-section-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
 }
 
-.offer-features svg {
-    color: var(--gold-primary);
-    flex-shrink: 0;
+.offer-price-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
 }
 
-.offer-pricing-box {
-    background-color: var(--bg-secondary);
+.offer-price-card {
+    background: var(--bg-secondary);
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius-md);
-    padding: 2.5rem 2rem;
-    text-align: center;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    gap: 0.75rem;
+    transition: var(--transition-smooth);
 }
 
-.price-wrapper {
-    margin-bottom: 1.5rem;
+.offer-price-card:hover {
+    border-color: var(--border-hover);
+    box-shadow: var(--shadow-sm);
 }
 
-.currency {
-    font-size: 1rem;
+.offer-price-card-highlight {
+    border-color: var(--gold-primary);
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.08), rgba(212, 175, 55, 0.02));
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.1);
+}
+
+.offer-price-label {
+    font-size: 0.95rem;
     font-weight: 700;
-    color: var(--gold-primary);
-    vertical-align: super;
-    margin-inline-end: 0.25rem;
-}
-
-.price {
-    font-size: clamp(3rem, 4vw, 4.5rem);
-    font-weight: 800;
     color: var(--text-primary);
-    line-height: 1;
 }
 
-.term {
-    display: block;
-    font-size: 0.85rem;
+.offer-price-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.offer-price-row {
+    font-size: 1rem;
     color: var(--text-secondary);
+}
+
+.gold-text {
+    color: var(--gold-primary);
+    font-size: 1.3rem;
+}
+
+.offer-price-note {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* Terms list */
+.offer-terms-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+
+.offer-terms-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.term-icon {
+    flex-shrink: 0;
+    font-size: 1rem;
+}
+
+/* Booking icons row */
+.offer-booking-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.offer-booking-icons span {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius-full);
+    transition: var(--transition-fast);
+}
+
+.offer-booking-icons span:hover {
+    border-color: var(--gold-primary);
+    color: var(--gold-primary);
+}
+
+.offer-cta-row {
+    display: flex;
+    justify-content: center;
     margin-top: 0.5rem;
-    letter-spacing: 0.05em;
+}
+
+@media (max-width: 768px) {
+    .offer-price-grid {
+        grid-template-columns: 1fr;
+    }
+    .offer-booking-icons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .offer-card-featured {
+        padding: 2rem 1.5rem;
+    }
 }
 
 /* 8. Fleet Gallery Section */
