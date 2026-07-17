@@ -135,12 +135,18 @@ const translations = {
         "opt-hiace": "Toyota Hiace VIP Van (14 Seats)",
         "opt-coaster": "Toyota Coaster Minibus (22 Seats)",
         "form-name": "Your Full Name",
+        "form-phone": "Phone Number",
+        "form-passengers": "Number of People",
+        "form-bags": "Number of Bags",
         "form-notes": "Special Requests / Flight Number",
         "form-submit": "Confirm Booking on WhatsApp",
         // Placeholders
         "placeholder-pickup": "e.g. Rushdy, Alexandria",
         "placeholder-dropoff": "e.g. New Cairo",
         "placeholder-name": "e.g. John Doe",
+        "placeholder-phone": "+20 1XX XXX XXXX",
+        "placeholder-passengers": "1",
+        "placeholder-bags": "0",
         "placeholder-notes": "Any specific requirements (child seats, flight details, extra luggage...)",
         // Footer
         "foot-desc": "Premium luxury limousine travel agency providing professional chauffeurs, elite vehicles, and punctual schedules across the Arab Republic of Egypt.",
@@ -297,12 +303,18 @@ const translations = {
         "opt-hiace": "تويوتا هايس عائلية فاخرة (14 مقعداً)",
         "opt-coaster": "تويوتا كوستر ميني باص (22 مقعداً)",
         "form-name": "الاسم بالكامل",
+        "form-phone": "رقم الهاتف",
+        "form-passengers": "عدد الأفراد",
+        "form-bags": "عدد الشنط",
         "form-notes": "طلبات خاصة / رقم الرحلة الجوية",
         "form-submit": "تأكيد الحجز عبر الواتساب",
         // Placeholders
         "placeholder-pickup": "مثال: رشدي، الإسكندرية",
         "placeholder-dropoff": "مثال: التجمع الخامس، القاهرة",
         "placeholder-name": "مثال: أحمد محمد",
+        "placeholder-phone": "+20 1XX XXX XXXX",
+        "placeholder-passengers": "1",
+        "placeholder-bags": "0",
         "placeholder-notes": "أي متطلبات خاصة (مقاعد أطفال، تفاصيل رحلة الطيران، حقائب إضافية...)",
         // Footer
         "foot-desc": "وكالة ليموزين فاخرة ومميزة تقدم سائقين محترفين وسيارات راقية وجداول مواعيد دقيقة في جميع أنحاء جمهورية مصر العربية.",
@@ -465,11 +477,17 @@ function setLanguage(lang) {
     const pickupInput = document.getElementById("pickup");
     const dropoffInput = document.getElementById("dropoff");
     const nameInput = document.getElementById("fullname");
+    const phoneInput = document.getElementById("phone");
+    const passengersInput = document.getElementById("passengers");
+    const bagsInput = document.getElementById("bags");
     const notesInput = document.getElementById("notes");
 
     if (pickupInput) pickupInput.placeholder = translations[lang]["placeholder-pickup"];
     if (dropoffInput) dropoffInput.placeholder = translations[lang]["placeholder-dropoff"];
     if (nameInput) nameInput.placeholder = translations[lang]["placeholder-name"];
+    if (phoneInput) phoneInput.placeholder = translations[lang]["placeholder-phone"];
+    if (passengersInput) passengersInput.placeholder = translations[lang]["placeholder-passengers"];
+    if (bagsInput) bagsInput.placeholder = translations[lang]["placeholder-bags"];
     if (notesInput) notesInput.placeholder = translations[lang]["placeholder-notes"];
 
     // Update language switcher button label
@@ -605,6 +623,9 @@ function handleBookingSubmit(event) {
     const tripTime = document.getElementById("tripTime").value;
     const vehicle = document.getElementById("fleetSelect").value;
     const fullname = document.getElementById("fullname").value;
+    const phone = document.getElementById("phone").value;
+    const passengers = document.getElementById("passengers").value;
+    const bags = document.getElementById("bags").value;
     const notes = document.getElementById("notes").value;
 
     // Get vehicle display label matching language
@@ -637,6 +658,9 @@ function handleBookingSubmit(event) {
         message = `✨ *Platinum Limousine Reservation Request* ✨\n` +
                   `---------------------------------------------\n` +
                   `👤 *Client Name:* ${fullname}\n` +
+                  `📞 *Phone Number:* ${phone}\n` +
+                  `👥 *Number of People:* ${passengers}\n` +
+                  `🧳 *Number of Bags:* ${bags}\n` +
                   `🗂️ *Trip Category:* ${categoryLabel}\n` +
                   `🚗 *Vehicle Type:* ${vehicleLabel}\n` +
                   `📍 *Pickup Location:* ${pickup}\n` +
@@ -657,6 +681,9 @@ function handleBookingSubmit(event) {
         message = `✨ *طلب حجز ليموزين - بلاتينيوم ليموزين* ✨\n` +
                   `---------------------------------------------\n` +
                   `👤 *اسم العميل:* ${fullname}\n` +
+                  `📞 *رقم الهاتف:* ${phone}\n` +
+                  `👥 *عدد الأفراد:* ${passengers}\n` +
+                  `🧳 *عدد الشنط:* ${bags}\n` +
                   `🗂️ *فئة الرحلة:* ${categoryLabel}\n` +
                   `🚗 *نوع السيارة:* ${vehicleLabel}\n` +
                   `📍 *مكان الركوب:* ${pickup}\n` +
